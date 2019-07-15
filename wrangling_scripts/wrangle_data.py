@@ -17,19 +17,23 @@ def return_figures():
 
     # first chart plots arable land from 1990 to 2015 in top 10 economies 
     # as a line chart
+    SKdf=pd.read_csv('data/SalesKaggle3.csv') 
+    SKdf2=SKdf[SKdf.SoldFlag.notnull()]
+    x_val=SKdf2.StrengthFactor
+    y_val=SKdf2.PriceReg
     
     graph_one = []    
     graph_one.append(
       go.Scatter(
-      x = [0, 1, 2, 3, 4, 5],
-      y = [0, 2, 4, 6, 8, 10],
-      mode = 'lines'
+      x = x_val,
+      y = y_val,
+      mode = 'markers'
       )
     )
 
-    layout_one = dict(title = 'Chart One',
-                xaxis = dict(title = 'x-axis label'),
-                yaxis = dict(title = 'y-axis label'),
+    layout_one = dict(title = 'Scatter plot one',
+                xaxis = dict(title = 'StrengthFactor'),
+                yaxis = dict(title = 'PriceReg'),
                 )
 
 # second chart plots ararble land for 2015 as a bar chart    
