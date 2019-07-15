@@ -1,6 +1,6 @@
 # Webportfolio2dashboard
 
-Libraries: No libraries needed.
+Libraries: need to install plotly
 
 Motivation: Deploy a Data Dashboard
 
